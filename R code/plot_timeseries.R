@@ -6,7 +6,7 @@
 #' @param data Preprocessed dataset.
 #' @param time_column Name of the column containing timestamps.
 #' @param value_column Name of the column containing electricity values.
-#' @param group_column (Optional) Name of the column used for grouping data (e.g., different regions).
+#' @param group_column (Optional) Name of the column used for grouping data (ex., different regions).
 #' 
 #' @return A time series plot.
 #' 
