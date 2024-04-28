@@ -11,3 +11,4 @@ Description: Functions for visualizing and analyzing data from an electric compa
 Depends: R (>= 3.1.2)
 License: CC0
 LazyData: true
+RoxygenNote: 7.3.1
