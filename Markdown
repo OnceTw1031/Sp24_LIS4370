@@ -1,0 +1,72 @@
+ElectricVisual Package Documentation
+Introduction:
+The ElectricVisual package provides visualization tools specifically designed for analyzing electricity data. This documentation outlines the main functions developed within this package, detailing their purpose, inputs, outputs, and usage examples.
+
+Functions:
+1. "import_data"
+Purpose:
+This function facilitates the import of electricity data from various sources, such as CSV files or databases. It ensures data consistency and prepares it for further analysis.
+
+Inputs:
+"file_path": Path to the data file or connection to the database.
+"format": Format of the data file (e.g., "csv", "xlsx").
+"...": Additional parameters specific to the data source (e.g., database credentials).
+Outputs:
+A structured dataset ready for analysis.
+
+Example:
+# Import data from a CSV file
+data <- import_data("electricity_data.csv", format = "csv")
+
+
+2. "preprocess_data"
+Purpose:
+This function preprocesses electricity data, handling missing values, outliers, and formatting inconsistencies. It ensures the data is clean and ready for visualization and analysis.
+
+Inputs:
+"data": The dataset obtained from import_data.
+Outputs:
+Preprocessed dataset.
+
+Example:
+# Preprocess the imported data
+clean_data <- preprocess_data(data)
+
+
+3. "plot_timeseries"
+Purpose:
+Visualize electricity consumption or generation over time, allowing users to identify trends, patterns, and anomalies.
+
+Inputs:
+"data": Preprocessed dataset.
+"time_column": Name of the column containing timestamps.
+"value_column": Name of the column containing electricity values.
+"group_column": (Optional) Name of the column used for grouping data (e.g., different regions).
+Outputs:
+A time series plot.
+
+Example:
+# Plot electricity consumption over time
+plot_timeseries(clean_data, time_column = "timestamp", value_column = "consumption")
+
+
+4. "plot_histogram"
+Purpose:
+Generate histograms to visualize the distribution of electricity consumption or generation values.
+
+Inputs:
+"data": Preprocessed dataset.
+"value_column": Name of the column containing electricity values.
+"bins": Number of bins for the histogram.
+Outputs:
+Histogram plot.
+
+Example:
+# Plot histogram of electricity consumption
+plot_histogram(clean_data, value_column = "consumption", bins = 20)
+
+Insights and Challenges
+During the development process, ensuring compatibility with different data formats and handling various preprocessing scenarios posed significant challenges. However, by implementing error handling and testing procedures, these challenges were effectively addressed.
+
+Future Improvements
+Future updates to the ElectricVisual package may include additional visualization functions tailored to specific analysis tasks within the energy sector. Additionally, optimization for large-scale datasets and integration with machine learning algorithms could enhance the package's capabilities further.
