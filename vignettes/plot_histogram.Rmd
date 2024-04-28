@@ -1,0 +1,45 @@
+---
+title: "Visualizing Data Distributions with ElectricVisual"
+author: "Isabelle Bolen"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+# Introduction
+
+The `plot_histogram` function in the ElectricVisual package is designed to visualize the distribution of a single variable in R. This vignette provides an overview of the function and demonstrates its usage with different datasets.
+
+# Function Overview
+
+The `plot_histogram` function allows users to create histograms to visualize the distribution of a single variable in their datasets.
+
+## Usage
+
+The basic syntax for using the `plot_histogram` function is as follows:
+
+```{r}
+
+plot_histogram(data, value_column)
+
+```
+
+Here are some examples demonstrating how to use the plot_histogram function with different datasets:
+
+```{r}
+
+# Basic histogram
+plot_histogram(data, value_column = "age")
+
+# Customizing histogram appearance
+plot_histogram(data, value_column = "height", bins = 20, color = "blue", title = "Height Distribution")
+
+```
+
+The plot_histogram function supports various visualization techniques, including:
+
+Adjusting the number of bins
+Customizing colors and titles
+Adding axis labels
+These techniques can help users explore and analyze the distribution of their data effectively.

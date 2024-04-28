@@ -1,0 +1,37 @@
+---
+title: "Importing Data with ElectricVisual"
+author: "Isabelle Bolen"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+# Introduction
+
+The `import_data` function in the ElectricVisual package is designed to facilitate the importing of data files into R for analysis. This vignette provides an overview of the function and demonstrates its usage with various types of data files.
+
+# Function Overview
+
+The `import_data` function allows users to import data from CSV, Excel, or other common file formats into R. It automatically detects the file format and imports the data into a data frame for further analysis.
+
+## Usage
+
+The basic syntax for using the `import_data` function is as follows:
+
+```{r}
+data <- import_data(file_path)
+```
+
+Here are some examples demonstrating how to use the import_data function with different types of data files:
+
+```{r}
+# Importing a CSV File
+data <- import_data("path/to/your/csv/file.csv")
+
+# Importing an Excel File
+data <- import_data("path/to/your/excel/file.xlsx")
+
+```
+
+After importing the data using the import_data function, users may need to perform additional preprocessing steps depending on the specific characteristics of the data.

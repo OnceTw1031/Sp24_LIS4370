@@ -1,0 +1,45 @@
+---
+title: "Plotting Time Series Data with ElectricVisual"
+author: "Isabelle Bolen"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+# Introduction
+
+The `plot_timeseries` function in the ElectricVisual package is designed to visualize time series data in R. This vignette provides an overview of the function and demonstrates its usage with different time series datasets.
+
+# Function Overview
+
+The `plot_timeseries` function allows users to create various types of plots for time series data, including line plots, area plots, and scatter plots.
+
+## Usage
+
+The basic syntax for using the `plot_timeseries` function is as follows:
+
+```{r}
+
+plot_timeseries(data, time_column, value_column)
+
+```
+
+Here are some examples demonstrating how to use the plot_timeseries function with different time series datasets:
+
+```{r}
+
+# Line plot
+plot_timeseries(data, time_column = "timestamp", value_column = "value", type = "line")
+
+# Area plot
+plot_timeseries(data, time_column = "date", value_column = "sales", type = "area")
+
+```
+
+The plot_timeseries function supports various visualization techniques, including:
+
+Line plots
+Area plots
+Scatter plots
+These techniques can help users visualize trends, patterns, and anomalies in their time series data.
