@@ -1,0 +1,56 @@
+---
+title: "ElectricVisual"
+output: github_document
+---
+
+# ElectricVisual
+
+ElectricVisual is an R package designed for visualization and analysis of electricity data. It provides functions for importing, preprocessing, and visualizing data from electric companies, enabling professionals in the energy sector to explore and interpret electricity data efficiently.
+
+## Installation
+
+You can install ElectricVisual from CRAN using the following command:
+
+```{r}
+
+install.packages("ElectricVisual")
+
+```
+
+Alternatively, you can install the development version from GitHub:
+
+```{r}
+
+devtools::install_github("OnceTw1031/Sp24_LIS4370")
+
+```
+
+Usage
+
+```{r}
+
+library(ElectricVisual)
+
+# Example usage of import_data function
+data <- import_data("electric_data.csv")
+
+# Example usage of preprocess_data function
+clean_data <- preprocess_data(data)
+
+# Example usage of plot_timeseries function
+plot_timeseries(clean_data, time_column = "timestamp", value_column = "consumption")
+
+# Example usage of plot_histogram function
+plot_histogram(clean_data, value_column = "consumption", bins = 20)
+
+```
+
+Features and Functionalities
+  Importing electricity data from CSV or Excel files.
+  Preprocessing data to handle missing values and outliers.
+  Visualizing time series data with customizable plots.
+  Visualizing data distributions with histograms.
+
+
+License Information
+ElectricVisual is released under the MIT License.
