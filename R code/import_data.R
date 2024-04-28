@@ -5,8 +5,8 @@
 #' for further analysis.
 #' 
 #' @param file_path Path to the data file or connection to the database.
-#' @param format Format of the data file (e.g., "csv", "xlsx").
-#' @param ... Additional parameters specific to the data source (e.g., database credentials).
+#' @param format Format of the data file (ex., "csv", "xlsx").
+#' @param ... Additional parameters specific to the data source (ex., database credentials).
 #' 
 #' @return A structured dataset ready for analysis.
 #' 
@@ -22,8 +22,6 @@ import_data <- function(file_path, format, ...) {
   } else {
     stop("Unsupported file format.")
   }
-  
-  # Additional preprocessing or data manipulation if required
   
   return(data)
 }
