@@ -16,10 +16,7 @@ preprocess_data <- function(data) {
   # Remove rows with missing values
   clean_data <- na.omit(data)
   
-  # Remove outliers (e.g., values beyond certain thresholds)
-  # Example: clean_data <- clean_data[clean_data$value_column < threshold, ]
-  
-  # Additional preprocessing steps if necessary
-  
+  # Remove outliers 
+ 
   return(clean_data)
 }
